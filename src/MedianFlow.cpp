@@ -29,7 +29,7 @@ MedianFlow::MedianFlow(const Mat &prevImg, const Mat &nextImg)
     this->prevImg.convertTo(this->prevImg, CV_32F);
     this->nextImg.convertTo(this->nextImg, CV_32F);
     
-    opticalFlow = new OpticalFlow(this->prevImg, this->nextImg);
+    opticalFlow = new OpticalFlow(this->prevImg, this->nextImg, OpticalFlow::USEOPENCV);
 }
 
 MedianFlow::~MedianFlow()
