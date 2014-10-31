@@ -12,5 +12,6 @@
 #include "system_struct.hpp"
 #include "track_of.hpp"
 #include "VideoProcessor.hpp"
+#include "TrackerInterface.h"
 
 #endif // FDUVIDEO_H

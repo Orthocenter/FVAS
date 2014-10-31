@@ -21,7 +21,7 @@
 
 
 
-#include <omp.h>
+//#include <omp.h>
 #include <opencv2/opencv.hpp>
 
 #endif // FDUVIDEO_LIB_H

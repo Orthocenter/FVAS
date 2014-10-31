@@ -34,7 +34,8 @@ int main(int argc, char *argv[])
     FaceRecognization FR(ops);
     people_detection_hog PD(ops);
     person_recognize PR(ops);
-    track_of TR(ops);
+    //track_of TR(ops);
+    TrackerInterface TR(ops);
     distinct_boxes distinct(ops);
 
     PR.test_init();
