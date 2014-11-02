@@ -23,7 +23,7 @@ std::string person_name(int label)
 int main(int argc, char *argv[])
 {
 
-    const string file="data/origin.avi";
+    const string file="/home/cyx/Developments/FVAS/data/origin.avi";
 
     options ops;
 
@@ -34,8 +34,8 @@ int main(int argc, char *argv[])
     FaceRecognization FR(ops);
     people_detection_hog PD(ops);
     person_recognize PR(ops);
-    track_of TR(ops);
-    //TrackerInterface TR(ops);
+    //track_of TR(ops);
+    TrackerInterface TR(ops);
     distinct_boxes distinct(ops);
 
     PR.test_init();

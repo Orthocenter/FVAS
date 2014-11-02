@@ -55,8 +55,8 @@ public:
                     j.y -= scenter_y;
                     j.x = 1.0/opt.scale*j.x+center_x;
                     j.y = 1.0/opt.scale*j.y+center_y;
-                    j.height*=2;
-                    j.width*=2;
+                    j.height/=opt.scale;
+                    j.width/=opt.scale;
                     box_safe(j, 0, 0, in_data.im_data.image.cols-1, in_data.im_data.image.rows-1);
                     shared_data::bbox temp;
                     temp = j;

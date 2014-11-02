@@ -200,23 +200,24 @@ void OpticalFlow::trackPts(vector<Point2f> &pts, vector<Point2f> &retPts)
     {
         vector<uchar> status;
         vector<float> err;
+        vector<Point2f> _pts, _retPts;
+        
         calcOpticalFlowPyrLK(prevImg, nextImg, pts, retPts, status, err, Size(15, 15), 1);
         
         for(int i = 0; i < retPts.size(); i++)
         {
-            if(status[i] == 0) retPts[i] = Point2f(-1.0, -1.0);
+            if(status[i] == 0) retPts[i] = OFError;
         }
     }
     else{
         retPts.clear();
-        for(vector<Point2f>::iterator it = pts.begin(); it != pts.end(); it++)
+        for(auto it : retPts)
         {
-            Point2f pt = calculatePyr(*it);
+            Point2f pt = calculatePyr(it);
             
             retPts.push_back(pt);
         }
     }
-
 }
 
 void OpticalFlow::swapImg()

@@ -55,7 +55,7 @@ struct options
         const int width_thresh{50};
         const int height_thresh{50};
 
-        const double scale{0.5};
+        const double scale{1.0};
     };
     struct opt_face_recognition
     {

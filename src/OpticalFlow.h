@@ -9,6 +9,8 @@
 #ifndef __MedianFlow__OpticalFlow__
 #define __MedianFlow__OpticalFlow__
 
+#define OFError Point2f(-1, -1)
+
 #include <vector>
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -27,7 +29,6 @@ private:
     bool method;
     
     Mat prevImg, nextImg;
-    vector<Point2f> prevPts, nextPts;
     vector<Mat> prevImgs, nextImgs, Ixs, Iys, Its;
     
     bool isInside(const Point2f &pt, int imgWidth, int imgHeight);
@@ -41,7 +42,7 @@ private:
     vector<Point2f> generateNeighborPts(const Point2f &pt, int imgWidth, int imgHeight);
     
 public:
-    const static bool USEOPENCV = 1;
+    const static bool USEOPENCV = true;
     
     OpticalFlow();
     

@@ -43,7 +43,10 @@ SOURCES += \
     stasm/stasm_lib.cpp \
     stasm/MOD_1/facedet.cpp \
     stasm/MOD_1/initasm.cpp \
-    src/face_predict.cpp
+    src/face_predict.cpp \
+    src/MedianFlow.cpp \
+    src/OpticalFlow.cpp \
+    src/TrackerInterface.cpp
 
 HEADERS += \
     src/DebugTimer.hpp \
@@ -85,7 +88,10 @@ HEADERS += \
     stasm/stasm_lib_ext.h \
     stasm/MOD_1/facedet.h \
     stasm/MOD_1/initasm.h \
-    src/face_predict.hpp
+    src/face_predict.hpp \
+    src/MedianFlow.h \
+    src/OpticalFlow.h \
+    src/TrackerInterface.h
 
 
 LIBS += /usr/local/lib/libopencv_calib3d.so \
